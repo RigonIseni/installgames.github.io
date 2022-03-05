@@ -19,7 +19,7 @@ body {
     margin: 30px;
     padding: 20px;
     border: 2px solid;
-    height: 230px;
+    min-height: 230px;
     width: 50%;
     display: flex;
     flex-direction: column;
