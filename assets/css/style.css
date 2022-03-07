@@ -473,6 +473,64 @@ input[type="search"]::-webkit-search-cancel-button {
       flex-direction: column;
       align-items: center;
   }
+  .mine {
+    max-width: 1068px;
+      margin: 50px auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+      
+  }
+  .mine img {
+      width: 250px;
+      height: auto;
+      margin: 0 auto;
+      margin-bottom: 25px;
+  }
+  .mine .inputat {
+      display: flex;
+      justify-content: space-evenly;
+
+  }
+  .mine .inputat button {
+      background-color: var(--light-color);
+      border: 0px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 100px;
+      height: 70px;
+      width: 70px;
+      cursor: pointer;
+    }
+    .mine .inputat button img {
+        width: 50px;
+      height: auto;
+      margin: 0px;
+    }
+  .mine input {
+    width: 70%;
+    height: 70px;
+    border-radius: 150px;
+    padding: 0px 30px;
+    border: 3px #1b182b solid;
+    background-color: #322f40;
+    color: white;
+    font-size: 20px;
+}
+.mine input[type="search"]::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+    height: 1em;
+    width: 1em;
+    border-radius: 50em;
+    background: url(https://pro.fontawesome.com/releases/v5.10.0/svgs/solid/times-circle.svg) no-repeat 50% 50%;
+    background-size: contain;
+    opacity: 1;
+  }
+ .mine input[type="search"].dark::-webkit-search-cancel-button {
+    filter: invert(1);
+  }
 @media screen and (min-width: 851px) and (max-width: 1023px) {
     .content {
         grid-template-columns: 1fr 1fr 1fr;

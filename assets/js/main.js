@@ -37,7 +37,7 @@ function loginFunc(e){
     if(user == null) {
         result.innerHTML = 'wrong username';
     } else if(username == data.username && pass == data.password){
-        window.location.href = './install.html';
+        window.location.href = './index.html';
     } else {
         result.innerHTML = 'wrong password';
     }
