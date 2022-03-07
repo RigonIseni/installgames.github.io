@@ -892,6 +892,8 @@ header {
     .contact {
         width: 100% !important;
     }
+.mine .inputat{
+  Display: block;
 }
 @media (min-width: 600px) and (max-width: 850px) and (orientation:landscape) {
     .b2 {
