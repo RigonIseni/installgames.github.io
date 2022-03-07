@@ -833,7 +833,6 @@ header {
         display: flex;
         justify-content: flex-start;
         align-items: center;
-        flex-wrap: wrap !important;
     }
     .logo {
         display: none;
