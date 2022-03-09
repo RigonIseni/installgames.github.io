@@ -7,6 +7,7 @@
     box-sizing: border-box;
     list-style: none;
     text-decoration: none;
+    transition: all .2s linear;
 }
 html {
     scroll-behavior: smooth;
@@ -44,7 +45,21 @@ body {
     background: var(--dark-color);
     max-width: 100%;
     overflow-x: hidden;
+    transition: background 0.2s linear
 }
+body.dark {
+	background: #e9efff;
+    color: #1b182b;
+}
+header.dark{
+    background: #e9efff;
+    color: #1b182b;
+}
+.nav.dark{
+    background: #e9efff;
+    color: #1b182b;
+}
+
 .container {
     max-width: 1068px;
     margin: auto;
@@ -78,8 +93,17 @@ header {
     height: 3rem;
     font-size: 25px;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
 }
+.logo.dark {
+    color: #1b182b !important;
+}
+.navbar.dark {
+    background: #e9efff;
+    color: #1b182b !important;
+}
+
 .nav .logo span{
     color: var(--main-color);
 }
@@ -130,6 +154,9 @@ header {
     transition: all .4s;
     padding: 5px 0px;
     width: 100%;
+}
+.navbar a.dark {
+    color: #1b182b !important;
 }
 .navbar a:hover {
     background: var(--main-color);
@@ -531,6 +558,57 @@ input[type="search"]::-webkit-search-cancel-button {
  .mine input[type="search"].dark::-webkit-search-cancel-button {
     filter: invert(1);
   }
+
+  .checkbox {
+	opacity: 0;
+	position: absolute;
+}
+
+.label {
+	background-color: #111;
+	border-radius: 50px;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 5px;
+	position: relative;
+	height: 26px;
+	width: 50px;
+	transform: scale(1.5);
+}
+
+.label .ball {
+	background-color: #fff;
+	border-radius: 50%;
+	position: absolute;
+	top: 2px;
+	left: 2px;
+	height: 22px;
+	width: 22px;
+	transform: translateX(0px);
+	transition: transform 0.2s linear;
+}
+
+.checkbox:checked + .label .ball {
+	transform: translateX(24px);
+}
+
+
+.fa-moon {
+	color: #f1c40f;
+}
+
+.fa-sun {
+	color: #f39c12;
+}
+.check {
+    max-width: 1068px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
 @media screen and (min-width: 851px) and (max-width: 1023px) {
     .content {
         grid-template-columns: 1fr 1fr 1fr;
@@ -833,6 +911,7 @@ header {
         display: flex;
         justify-content: flex-start;
         align-items: center;
+        flex-wrap: wrap !important;
     }
     .logo {
         display: none;
@@ -891,8 +970,23 @@ header {
     .contact {
         width: 100% !important;
     }
-.mine .inputat{
-  Display: block;
+    .mine {
+        width: 100%;
+        margin: 0 auto;
+    }
+    .mine img {
+        margin: 20px auto;
+    }
+}
+@media screen and (max-width: 375px){
+    .mine .inputat {
+        flex-direction: column;
+        align-items: center;
+    }
+    .mine .inputat input {
+        width: 85%;
+        margin-bottom: 10px;
+    }
 }
 @media (min-width: 600px) and (max-width: 850px) and (orientation:landscape) {
     .b2 {
