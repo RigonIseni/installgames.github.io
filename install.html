@@ -11,6 +11,7 @@
     <link rel="shortcut icon" href="./assets/images/img/logo.png" type="image/x-icon">
     <!-- Box Icons -->
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha512-0S+nbAYis87iX26mmj/+fWt1MmaKCv80H+Mbo+Ne7ES4I6rxswpfnC6PxmLiw33Ywj2ghbtTw0FkLbMWqh4F7Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <!-- <script>
 $(document).ready(function(){
@@ -63,10 +64,10 @@ $(document).ready(function(){
     </section>
     <div class="check container">
         <input type="checkbox" class="checkbox" id="chk" />
-        <label class="label" for="chk">
-            <i class="fas fa-moon"></i>
+        <label class="label" id="labeli" for="chk">
             <i class="fas fa-sun"></i>
-            <div class="ball"></div>
+            <i class="fas fa-moon"></i>
+            <div id="balli" class="ball"></div>
         </label>
     </div>
 <div class="qajo" id="ciberi">
@@ -261,7 +262,8 @@ $(document).ready(function(){
   <img src="./assets/images/img/unnamed.webp" alt="">
 <div class="inputat">
   <input type="search" placeholder="Search a server..." name="search" onblur="getVal()" id="search">
-    <button><img src="https://www.citypng.com/public/uploads/small/116400840186bmo0mkghcdq8hn99wmpbh9wrgbytghidisi7e41vegbclccrb6kg9hrk0ebgqrpc5ezz2tjtkvsfsvk7yfbakowxbpvrzsakde3.png" alt=""></button>
+    <button id="btn"><img src="https://www.citypng.com/public/uploads/small/116400840186bmo0mkghcdq8hn99wmpbh9wrgbytghidisi7e41vegbclccrb6kg9hrk0ebgqrpc5ezz2tjtkvsfsvk7yfbakowxbpvrzsakde3.png" alt=""></button>
+    <i id="i1" class="fas fa-search"></i>
 </div>
 <br>
 <div id="server-status">
@@ -279,9 +281,9 @@ $(document).ready(function(){
         <div class="content">
                     <div class="a1 box" id="1">
                         <img src="./assets/images/img/trending1.webp" alt="">
-                    <div class="box-text">
+                    <div id="box" class="box-text">
                         <h2>CyberPunk 2077</h2>
-                        <h3><span class="info">none</span><br>Free (cracked)</h3>
+                        <h3>Free (cracked)</h3>
                         <div class="rating-download">
                             <div class="rating">
                                 <i class='bx bxs-star' ></i>
@@ -294,9 +296,9 @@ $(document).ready(function(){
         <!-- slide 2 -->
                     <div class="a1 box" id="2">
                         <img src="./assets/images/img/trending2.jpg" alt="">
-                    <div class="box-text">
+                    <div id="box1" class="box-text">
                         <h2>Battlefield 2042</h2>
-                        <h3><span class="info">59.99€</span><br>34.79€ (not cracked)</h3>
+                        <h3>34.79€ (not cracked)</h3>
                         <div class="rating-download">
                             <div class="rating">
                                 <i class='bx bxs-star' ></i>
@@ -309,9 +311,9 @@ $(document).ready(function(){
         <!-- slide 3 -->
                     <div class="a1 box" id="3">
                         <img src="./assets/images/img/trending3.jpg" alt="">
-                    <div class="box-text">
+                    <div id="box2" class="box-text">
                         <h2>Valhalla</h2>
-                        <h3><span class="info">none</span><br>free (cracked)</h3>
+                        <h3>free (cracked)</h3>
                         <div class="rating-download">
                             <div class="rating">
                                 <i class='bx bxs-star' ></i>
@@ -324,9 +326,9 @@ $(document).ready(function(){
         <!-- slide 4 -->
                     <div class="a1 box" id="4">
                         <img src="./assets/images/img/trending4.jpg" alt="">
-                    <div class="box-text">
+                    <div id="box3" class="box-text">
                         <h2>Ghost of Tsushima</h2>
-                        <h3>$69.99 <br> (available ps4, ps5)</h3>
+                        <h3>(available ps4, ps5)</h3>
                         <div class="rating-download">
                             <div class="rating">
                                 <i class='bx bxs-star' ></i>
@@ -339,9 +341,9 @@ $(document).ready(function(){
         <!-- slide 5 -->
                     <div class="a1 box" id="5">
                         <img src="./assets/images/img/trending5.png" alt="">
-                    <div class="box-text">
+                    <div id="box4" class="box-text">
                         <h2>GTA V</h2>
-                        <h3><span class="info">none</span><br>Free (cracked)</h3>
+                        <h3>Free (cracked)</h3>
                         <div class="rating-download">
                             <div class="rating">
                                 <i class='bx bxs-star' ></i>
@@ -354,9 +356,9 @@ $(document).ready(function(){
         <!-- slide 6 -->
                     <div class="a1 box" id="6">
                         <img src="./assets/images/img/trending6.jpg" alt="">
-                    <div class="box-text">
+                    <div id="box5" class="box-text">
                         <h2>Dying Light 2</h2>
-                        <h3><span class="info">none</span><br>59,99€</h3>
+                        <h3>59,99€</h3>
                         <div class="rating-download">
                             <div class="rating">
                                 <i class='bx bxs-star' ></i>
@@ -369,9 +371,9 @@ $(document).ready(function(){
         <!-- slide 7 -->
                     <div class="a1 box" id="7">
                         <img src="./assets/images/img/trending7.png" alt="">
-                    <div class="box-text">
+                    <div id="box6" class="box-text">
                         <h2>Halo Infinite</h2>
-                        <h3><span class="info">none</span><br>Free</h3>
+                        <h3>Free</h3>
                         <div class="rating-download">
                             <div class="rating">
                                 <i class='bx bxs-star' ></i>
@@ -384,7 +386,7 @@ $(document).ready(function(){
         <!-- slide 8 -->
                     <div class="a1 box" id="8">
                         <img src="./assets/images/img/trending8.png" alt="">
-                    <div class="box-text">
+                    <div id="box7" class="box-text">
                         <h2>Village Resident...</h2>
                         <h3>Free (cracked)</h3>
                         <div class="rating-download">
@@ -406,7 +408,7 @@ $(document).ready(function(){
         <div class="new-content">
                         <div class="a1 box" onclick="hapur()"  id="9">
                             <img src="./assets/images/img/new1.jpg" alt="">
-                        <div class="box-text">
+                        <div id="box8" class="box-text">
                             <h2>Subway Surfers</h2>
                             <h3>Hacked</h3>
                             <div class="rating-download">
@@ -421,7 +423,7 @@ $(document).ready(function(){
             <!-- slide 2 -->
                         <div class="a1 box" id="10">
                             <img src="./assets/images/img/new2.jpg" alt="">
-                        <div class="box-text">
+                        <div id="box9" class="box-text">
                             <h2>Call of Duty</h2>
                             <h3>Hacked</h3>
                             <div class="rating-download">
@@ -436,7 +438,7 @@ $(document).ready(function(){
             <!-- slide 3 -->
                         <div class="a1 box" id="11">
                             <img src="./assets/images/img/new3.jpg" alt="">
-                        <div class="box-text">
+                        <div id="box10" class="box-text">
                             <h2>Free Guy</h2>
                             <h3>Not available</h3>
                             <div class="rating-download">
@@ -451,7 +453,7 @@ $(document).ready(function(){
             <!-- slide 4 -->
                         <div class="a1 box" id="12">
                             <img src="./assets/images/img/new4.jpg" alt="">
-                        <div class="box-text">
+                        <div id="box11" class="box-text">
                             <h2>Clash Royale</h2>
                             <h3>Hacked (private server)</h3>
                             <div class="rating-download">
@@ -466,7 +468,7 @@ $(document).ready(function(){
             <!-- slide 5 -->
                         <div class="a1 box" id="13">
                             <img src="./assets/images/img/new5.png" alt="">
-                        <div class="box-text">
+                        <div id="box12" class="box-text">
                             <h2>Minecraft</h2>
                             <h3>Free download</h3>
                             <div class="rating-download">
@@ -481,7 +483,7 @@ $(document).ready(function(){
             <!-- slide 6 -->
                         <div class="a1 box" id="14">
                             <img src="./assets/images/img/new6.png" alt="">
-                        <div class="box-text">
+                        <div  id="box13"  class="box-text">
                             <h2>PUBG</h2>
                             <h3>Hacked (apk + obb)</h3>
                             <div class="rating-download">
@@ -496,7 +498,7 @@ $(document).ready(function(){
             <!-- slide 7 -->
                         <div class="a1 box" id="15">
                             <img src="./assets/images/img/new7.png" alt="">
-                        <div class="box-text">
+                        <div id="box14" class="box-text">
                             <h2>Fortnite</h2>
                             <h3>Available (all devices)</h3>
                             <div class="rating-download">
@@ -511,7 +513,7 @@ $(document).ready(function(){
             <!-- slide 8 -->
                         <div class="a1 box" id="16">
                             <img src="./assets/images/img/new8.jpg" alt="">
-                        <div class="box-text">
+                        <div id="box15" class="box-text">
                             <h2>Car parking</h2>
                             <h3>money + on spent</h3>
                             <div class="rating-download">
@@ -741,6 +743,29 @@ const link = document.getElementById('link');
 const link1 = document.getElementById('link1');
 const link2 = document.getElementById('link2');
 const link3 = document.getElementById('link3');
+const box = document.getElementById('box');
+const box1 = document.getElementById('box1');
+const box2 = document.getElementById('box2');
+const box3 = document.getElementById('box3');
+const box4 = document.getElementById('box4');
+const box5 = document.getElementById('box5');
+const box6 = document.getElementById('box6');
+const box7 = document.getElementById('box7');
+const box8 = document.getElementById('box8');
+const box9 = document.getElementById('box9');
+const box10 = document.getElementById('box10');
+const box11 = document.getElementById('box11');
+const box12 = document.getElementById('box12');
+const box13 = document.getElementById('box13');
+const box14 = document.getElementById('box14');
+const box15 = document.getElementById('box15');
+const label = document.getElementById('labeli');
+const ball = document.getElementById('balli');
+const search = document.getElementById('search');
+const btn = document.getElementById('btn');
+const i2 = document.getElementById('i1');
+
+
 
 chk.addEventListener('change', () => {
 	document.body.classList.toggle('dark');
@@ -751,6 +776,28 @@ chk.addEventListener('change', () => {
     link1.classList.toggle('dark');
     link2.classList.toggle('dark');
     link3.classList.toggle('dark');
+    box.classList.toggle('dark');
+    box1.classList.toggle('dark');
+    box2.classList.toggle('dark');
+    box3.classList.toggle('dark');
+    box4.classList.toggle('dark');
+    box5.classList.toggle('dark');
+    box6.classList.toggle('dark');
+    box7.classList.toggle('dark');
+    box8.classList.toggle('dark');
+    box9.classList.toggle('dark');
+    box10.classList.toggle('dark');
+    box11.classList.toggle('dark');
+    box12.classList.toggle('dark');
+    box13.classList.toggle('dark');
+    box14.classList.toggle('dark');
+    box15.classList.toggle('dark');
+    label.classList.toggle('dark');
+    ball.classList.toggle('dark');
+    search.classList.toggle('dark');
+    btn.classList.toggle('dark');
+    i2.classList.toggle('dark');
+
 });
 
 
