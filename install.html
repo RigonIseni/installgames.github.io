@@ -261,13 +261,13 @@ $(document).ready(function(){
 
   <img src="./assets/images/img/unnamed.webp" alt="">
 <div class="inputat">
-  <input type="search" placeholder="Search a server..." name="search" onblur="getVal()" id="search">
-    <button id="btn"><img src="https://www.citypng.com/public/uploads/small/116400840186bmo0mkghcdq8hn99wmpbh9wrgbytghidisi7e41vegbclccrb6kg9hrk0ebgqrpc5ezz2tjtkvsfsvk7yfbakowxbpvrzsakde3.png" alt=""></button>
-    <i id="i1" class="fas fa-search"></i>
+  <input type="search" placeholder="Search a server..." name="search" id="search">
 </div>
 <br>
 <div id="server-status">
-    this server is currently <span id="server-online"></span>!
+    this server is currently: <span id="server-online"></span>! <br>
+    Max Numbers of Players: <span style="color: greenyellow;" id="max-players"></span>! <br>
+    Current Number of Players Playing: <span style="color: goldenrod;" id="current-players"></span>!
 </div>
 
 </div>
@@ -712,27 +712,48 @@ function heka15() {
     document.getElementById("body").style.overflowY = "scroll";
 }
 
+let searchi = document.querySelector("#search");
 
+searchi.addEventListener("keyup", (e) => {
+var value = e.target.value;
+switch(e.keyCode){
+    case 13:
 
-function getVal() {
-  const val = document.getElementById('search').value;
-
-  switch(val.keyCode){
-      case 13:
-          getVal()
-          break;
-  }
-  MinecraftAPI.getServerStatus(val, {
+    MinecraftAPI.getServerStatus(value, {
         port: 25565 
     }, function (err, status) {
         if (err) {
             return document.getElementById('server-status').innerHTML = 'Error loading status';
         }
-        console.log(status);
         document.getElementById('server-online').innerHTML = status.online ? 'ON' : 'OFF';
+        if(status.online = true){
+            document.getElementById('server-online').style.color = "greenyellow"
+            document.getElementById('server-online').innerHTML = 'ON'
+        } else {
+            document.getElementById('server-online').style.color = "red"
+            document.getElementById('server-online').innerHTML = 'OFF'
+        }
+        document.getElementById('max-players').innerHTML = status.players.max;
+        document.getElementById("current-players").innerHTML = status.players.now;
     });
-  console.log(val);
+    break;
 }
+
+
+})
+
+
+// function getVal() {
+//   const val = document.getElementById('search');
+
+//   switch(getVal.keyCode){
+//       case 13:
+//           let value = getVal.target.
+//           getVal()
+//           break;
+//   }
+  
+// }
 
 
 const chk = document.getElementById('chk');
@@ -762,8 +783,6 @@ const box15 = document.getElementById('box15');
 const label = document.getElementById('labeli');
 const ball = document.getElementById('balli');
 const search = document.getElementById('search');
-const btn = document.getElementById('btn');
-const i2 = document.getElementById('i1');
 
 
 
@@ -795,8 +814,6 @@ chk.addEventListener('change', () => {
     label.classList.toggle('dark');
     ball.classList.toggle('dark');
     search.classList.toggle('dark');
-    btn.classList.toggle('dark');
-    i2.classList.toggle('dark');
 
 });
 
