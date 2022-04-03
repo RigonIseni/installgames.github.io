@@ -4,30 +4,72 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign up</title>
-    <link rel="stylesheet" href="./assets/css/sign-up.css">
+    <title>Coding for twitch</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    <div class="container">
-        <form onsubmit="signup()">
-            <label for="username">Username</label> <br>
-            <input type="text" required name="username" id="username"> <br>
-
-            <label for="email">Email</label> <br>
-            <input type="email" required name="email" id="email"> <br>
-
-            <label for="password">Password</label> <br>
-            <input type="password" required minlength="8" name="password" id="password"> <br>
-
-            <br>
-
-            <button type="submit">Sign up</button>
-
-            <div id="kaloj" class="success">You just signed up!</div>
-
-            <a href="./login.html">already have an account?</a>
-        </form>
+    <div id="preloader">
+        <h1>Please wait to load all the images...</h1>
+        <img src="./assets/img/loader.gif" alt="">
+        
     </div>
-    <script src="./assets/js/main.js"></script>
+    <header>
+        <div class="logo">
+            <h2>RigonHaze</h2>
+            <div class="burger">
+                <i class="fa-solid fa-bars menu"></i>
+                <i class="fa-solid fa-xmark iksi"></i>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#about">About me</a></li>
+                <li><a href="#contact">Contact me</a></li>
+            </ul>
+        </nav>
+        
+    </header>
+
+    <div id="home" class="bg-image"></div>
+    
+    <div class="home">
+        <h1>Hi, I am</h1>
+        <img src="./assets/Rigon.webp" alt="">
+        <h1>Rigon Iseni</h1>
+    </div>
+    <section class="portfolio" id="portfolio">
+        <a target="_blank" href="https://rigoniseni.github.io/">
+            <img src="./assets/img/Epic.png" alt="epicgames">
+            <h2>RigonStore <br> (Game shop)</h2>
+        </a>
+        <a target="_blank" href="http://rigong.000webhostapp.com/Burimi-textile"> 
+            <img src="./assets/img/burimi.png" alt="burimi">
+            <h2>Burimi Textile Company</h2>
+        </a>
+        <a target="_blank" href="https://rigong.000webhostapp.com/Bledent">
+            <img src="./assets/img/bledent.png" alt="bledent">
+            <h2>Bledent <br> (dentist)</h2>
+        </a>
+    </section>
+        
+    <section id="about" class="about">
+        <img src="./assets/img/programming.jfif" alt="">
+        <div class="pg">
+            <h1>Rigon Iseni <br> (RigonHaze)</h1>
+            <hr>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est reiciendis accusantium dignissimos rem a sequi nam debitis sunt autem eum quaerat vel vero, aut qui aliquam id, modi adipisci molestiae.</p>
+        </div>
+    </section>
+    <section id="contact">
+        <div>
+        <a href="https://www.facebook.com/rigon.hyseni.52"><i class="face fa-brands fa-facebook-square"></i></a>
+        <a href="https://www.instagram.com/rigon_is"><i class="insta fa-brands fa-instagram-square"></i></a>
+    </div>
+        <p>+389 070 566 594</p>
+    </section>
+    <script src="./main.js"></script>
 </body>
 </html>
