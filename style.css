@@ -26,6 +26,9 @@ header .logo {
     color: #fff;
     z-index: 1000;
 }
+header .logo i {
+    display: none;
+}
 header nav{
     display: flex;
     align-items: center;
@@ -190,6 +193,9 @@ header a:hover{
     transform: scale(1.3) rotate(5deg);
     margin-left: 10px;
 }
+#mob{
+    display: none;
+}
   #contact p{
       font-size: 20px;
       color: white;
@@ -202,6 +208,19 @@ header a:hover{
 @media screen and (max-width: 1000px) {
     header nav{
         width: 50%;
+    }
+    .portfolio{
+        grid-template-columns: 1fr;
+        height: auto;
+    }
+    .portfolio a {
+        margin: 90px auto;
+    }
+    .about{
+        height: 100vh;
+    }
+    .about img{
+        display: none;
     }
 }
 @media screen and (max-width: 790px) {
@@ -216,17 +235,37 @@ header a:hover{
         align-items: center;
     }
     header nav{
-        width: 100%;
-        height: 200px;
+        width: 70%;
+        height: 100vh;
         transition: all .4s;
         position: absolute;
-        top: 79px;
+        top: 0;
         left: -100%;
-        z-index: 1;
+        z-index: 100000000000000000000000;
         background-color: rgb(12, 10, 32);
+        flex-direction: column;
     }
     header nav.active{
         left: 0px;
+    }
+    header nav>#mob{
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        width: 100%;
+        height: 30%;
+        color: white;
+    }
+    header nav>p{
+        width: 100%;
+        border: 1px solid gray;
+        margin-top: 30px;
+    }
+    header nav div div{
+        text-align: right;
+    }
+    header nav div img{
+        width: 150px;
     }
     header nav ul{
         flex-direction: column;
@@ -240,6 +279,7 @@ header a:hover{
     }
     header .logo i{
         cursor: pointer;
+        display: block;
     }
     .home h1{
         font-size: 25px;
@@ -247,6 +287,33 @@ header a:hover{
     .home img{
         width: 200px;
     }
+    .black{
+        display: block;
+        width: 100%;
+        height: 100vh;
+        position: fixed;
+        transition: all .4s ease-in-out;
+    }
+    .black.active{
+        background-color: black;
+        opacity: .5;
+        z-index: 1000;
+    }
+}
+@media screen and (max-width: 500px){
+    header nav>#mob{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 50%;
+    }
+    header nav>#mob>div {
+        text-align: center;
+    }
+    header nav p{
+        margin-top: 10px;
+    }
+    
 }
 @media screen and (max-height: 550px){
     .home {
@@ -255,6 +322,28 @@ header a:hover{
     }
     .bg-image{
         height: 550px;
+    }
+    .about{
+        height: 550px;
+    }
+}
+@media screen and (max-height: 750px){
+    header nav div img{
+        width: 100px;
+    }
+}
+@media screen and (max-height: 500px){
+    header nav #mob{
+        display: none;
+    }
+    header nav div img{
+        display: none;
+    }
+    header nav>p {
+        display: none;
+    }
+    header nav ul {
+        height: 100vh;
     }
 }
 #preloader{
