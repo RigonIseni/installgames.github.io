@@ -1,84 +1,127 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coding for twitch</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>experimenting</title>
+    <link rel="stylesheet" href="./style.css"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<?php include 'message.php';?>
 </head>
 <body>
-    <div class="black"></div>
-    <div id="preloader">
-        <h1>Please wait to load all the images...</h1>
-        <img src="./assets/img/loader.gif" alt="">
-        
-    </div>
-    <header>
-        <div class="logo">
-            <h2>RigonHaze</h2>
-            <div class="burger">
-                <i class="fa-solid fa-bars menu"></i>
-                <i class="fa-solid fa-xmark iksi"></i>
-            </div>
-        </div>
-        <nav>
-            <div id="mob">
-                <img src="./assets/Rigon.webp" alt="me">
-                <div>
-                <h2>Rigon Iseni</h2>
-                <h3>Web Developer</h3>
-            </div>
-            </div>
-            <p></p>
-            <ul>
-                <li><a class="links" href="#home">Home</a></li>
-                <li><a class="links1" href="#portfolio">Portfolio</a></li>
-                <li><a class="links2" href="#about">About me</a></li>
-                <li><a class="links3" href="#contact">Contact me</a></li>
-            </ul>
-        </nav>
-        
-    </header>
 
-    <div id="home" class="bg-image"></div>
-    
-    <div class="home">
-        <h1>Hi, I am</h1>
-        <img src="./assets/Rigon.webp" alt="">
-        <h1>Rigon Iseni</h1>
+
+
+    <div id="preloader">
+        <h2>Please wait...</h2>
+        <img src="./loader.gif" alt="" />
     </div>
-    <section class="portfolio" id="portfolio">
-        <a target="_blank" href="https://rigoniseni.github.io/">
-            <img src="./assets/img/Epic.png" alt="epicgames">
-            <h2>RigonStore <br> (Game shop)</h2>
-        </a>
-        <a target="_blank" href="http://rigong.000webhostapp.com/Burimi-textile"> 
-            <img src="./assets/img/burimi.png" alt="burimi">
-            <h2>Burimi Textile Company</h2>
-        </a>
-        <a target="_blank" href="https://rigong.000webhostapp.com/Bledent">
-            <img src="./assets/img/bledent.png" alt="bledent">
-            <h2>Bledent <br> (dentist)</h2>
-        </a>
-    </section>
+            <div class="back">
+<nav id="nav">
+                <ul>
+                    <li id="homija"><a href="#home">Home</a></li>
+                    <li id="port"><a href="#portfolio">Portfolio</a></li>
+                    <li id="cont"><a href="#contact">Contact me</a></li>
+                </ul>
+            </nav>
+
+    <div id="home">
         
-    <section id="about" class="about">
-        <img src="./assets/img/programming.jfif" alt="">
-        <div class="pg">
-            <h1>Rigon Iseni <br> (RigonHaze)</h1>
-            <hr>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est reiciendis accusantium dignissimos rem a sequi nam debitis sunt autem eum quaerat vel vero, aut qui aliquam id, modi adipisci molestiae.</p>
-        </div>
-    </section>
-    <section id="contact">
-        <div>
-        <a href="https://www.facebook.com/rigon.hyseni.52"><i class="face fa-brands fa-facebook-square"></i></a>
-        <a href="https://www.instagram.com/rigon_is"><i class="insta fa-brands fa-instagram-square"></i></a>
+        <header>
+            <div id="toggler"class="logo">
+            <i class="fa-solid fa-bars"></i>
+            </div>
+        </header>
+        <div class="name">
+            <h2>Hi, I am</h2>
+        <img src="./Rigon.webp" alt="" />
+        <h1>Rigon Iseni</h1>
+        <br />
+        <p class="hr"></p>
+        <br />
+        <div class="intro">
+        <h2>Introduction</h2>
+        <p class="par">hi, I am <strong>Rigon Iseni</strong> a front-end developer, so creative and so many great things that you might hire me! I am 12 years old and I know that I am young but "You're never young to go after your dreams"!</p>
+    </div>    
     </div>
-        <p>+389 070 566 594</p>
+    </div>
+    <div id="portfolio">
+        <header>
+            <div id="toggler1"class="logo">
+            <i class="fa-solid fa-bars"></i>
+            </div>
+        </header>
+        <div class="para">
+        <h1>Portfolio</h1>
+    <div class="links">
+        <a href="https://rigoniseni.github.io/Rigon-Store/">
+            <img src="./Epic.png" alt="Epic">
+            <h1>Rigon-Store <br> (Install Games)</h1>
+        </a>
+        <a href="https://rigong.000webhostapp.com/Burimi-textile/">
+            <img src="./burimi.png" alt="Burimi">
+            <h1>Burimi Textile Company</h1>
+        </a>
+        <a href="https://rigong.000webhostapp.com/Bledent/">
+            <img src="./bledent.png" alt="bledent">
+            <h1>Bledent <br>(Dentist)</h1>
+        </a>
+    </div>
+    </div>
+    </div>
+<section id="contact">
+    <header>
+        <div id="toggler2"class="logo">
+        <i class="fa-solid fa-bars"></i>
+        </div>
+    </header>
+    <div class="cont">
+    <div class="wrapper">
+        <header><p>Send Rigon a Message</p></header>
+        <form action="#">
+          <div class="dbl-field">
+            <div class="field">
+              <input type="text" name="name" placeholder="Enter your name">
+              <i class='fas fa-user'></i>
+            </div>
+            <div class="field">
+              <input type="email" name="email" placeholder="Enter your email">
+              <i class='fas fa-envelope'></i>
+            </div>
+          </div>
+          <div class="dbl-field">
+            <div class="field">
+              <input type="tel" name="phone" placeholder="Enter your phone">
+              <i class='fas fa-phone-alt'></i>
+            </div>
+            <div class="field">
+              <input type="text" name="website" placeholder="Enter your website (optional)">
+              <i class='fas fa-globe'></i>
+            </div>
+          </div>
+          <div class="message">
+            <textarea placeholder="Write your message" name="message"></textarea>
+            <i class="fa-solid fa-message"></i>
+          </div>
+          <div class="button-area">
+            <button type="submit">Send Message</button>
+            <span></span>
+          </div>
+        </form>
+      </div>
+      <div class="icons">
+          <div>
+        <a target="_blank" href="https://www.instagram.com/rigon_is/"><i class="fa-brands fa-instagram-square insta"></i></a>
+        <a target="_blank" href="https://www.facebook.com/rigon.hyseni.52/"><i class="fa-brands fa-facebook-square face"></i></a>
+        <a target="_blank" href="https://github.com/RigonIseni"><i class="fa-brands fa-github-square git"></i></a>
+    </div>
+        <a href="./Resume.docx" class="button" download>Download CV <i class="fa-solid fa-download"></i></a>
+      </div>
+    </div>
     </section>
-    <script src="./main.js"></script>
+
+</div>
+
+    <script src="./main.js" type="text/javascript" charset="utf-8"></script>
 </body>
 </html>
