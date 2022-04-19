@@ -160,7 +160,7 @@ nav ul li a:hover{
     color: black;
 }
 #portfolio .para .links img {
-    width: 300px;
+    width: 100%;
     border-radius: 20px 20px 0px 0px;
 }
 #portfolio .para .links a h1 {
@@ -187,7 +187,6 @@ nav ul li a:hover{
     height: 100vh;
 }
 #contact {
-    position: absolute;
     opacity: 0;
     display: none;
     transition: all .4s;
@@ -439,12 +438,34 @@ nav ul li a:hover{
     width: 70%;
     margin-bottom: 20px;
     }
+    #home .intro{
+      height: auto;
+    }
 }
 @media screen and (max-width: 500px) and (max-height: 1050px) {
-    .back{
-        height: 1050px;
-    }
     #contact{
         height: 90%;
     }
+    .back.sm-dev{
+      height: 1000px;
+    }
+    .back.height{
+      height: 100vh;
+    }
+    .back.active{
+      height: 1700px;
+    }
+}
+@media screen and (max-width: 400px) and (max-height: 1000px){
+  .back {
+    height: 1000px;
+  }
+  .back.mp{
+    height: 1100px;
+  }
+}
+@media screen and (max-width: 500px){
+  #portfolio .para .links a {
+    width: 250px;
+  }
 }

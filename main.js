@@ -17,15 +17,17 @@ toggler.addEventListener("click", () => {
         div.style.display = "none";
     }, 500);
     back.classList.remove("active");
+    back.classList.add("height");
 })
 toggler1.addEventListener("click", () => {
     nav.classList.add("active");
     portfolio.classList.remove("activi")
  setTimeout(function() {
         portfolio.style.display = "none";
-    }, 200);
+    }, 300);
     
     back.classList.remove("active");
+    back.classList.add("height");
 })
 toggler2.addEventListener("click", () => {
     nav.classList.add("active");
@@ -34,7 +36,8 @@ toggler2.addEventListener("click", () => {
         contact.style.display = "none";
     }, 300);
     
-    back.classList.remove("active");
+    back.classList.remove("active", "mp");
+    back.classList.add("height");
 })
 
 linku.addEventListener("click", () => {
@@ -42,14 +45,16 @@ linku.addEventListener("click", () => {
     div.classList.remove("active");
 setTimeout(function() {
         div.style.display = "block";
-    }, 100);
+    }, 300);
+    back.classList.add("sm-dev");
+    back.classList.remove("height");
 } )
 
 port.addEventListener("click", () => {
     nav.classList.remove("active");
 setTimeout(function() {
         portfolio.style.display = "flex";
-    }, 100);
+    }, 300);
     portfolio.classList.add("active", "activi");
     back.classList.add("active");
 } )
@@ -58,8 +63,9 @@ cont.addEventListener("click", () => {
     contact.classList.add("active");
 setTimeout(function() {
         contact.style.display = "block";
-    }, 600);
-    contact.classList.add("active");
+    }, 300);
+    back.classList.add("mp")
+    back.classList.remove("height")
 } )
 
 
